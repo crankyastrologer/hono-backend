@@ -1,16 +1,11 @@
 import {OpenAPIHono} from "@hono/zod-openapi";
-import {notFound, onError} from "stoker/middlewares";
-import {pinoLogger} from "@/middlewares/pino-logger";
+import {AppBindings} from "@/lib/types";
+import createApp from "@/lib/create-app";
+import configureOpenAPI from "@/lib/configure-open-api";
 
-const app = new OpenAPIHono();
 
-app.use(pinoLogger())
+const app = createApp()
 
-app.get('/', (c) => {
-  return c.text('Hello Hono!')
-});
-app.get('/error', (c) => {
-  throw new Error('error')})
-app.notFound(notFound)
-app.onError(onError)
+configureOpenAPI(app)
+
 export default  app
