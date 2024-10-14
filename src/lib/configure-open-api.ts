@@ -1,5 +1,5 @@
 import {AppOpenAPI} from "@/lib/types";
-
+import {apiReference} from "@scalar/hono-api-reference";
 import packageJSON from '../../package.json'
 
 export default function configureOpenAPI(app:AppOpenAPI) {
@@ -15,4 +15,10 @@ export default function configureOpenAPI(app:AppOpenAPI) {
             }
         ]
     })
+    app.get('/reference',apiReference({
+        spec:{
+            url:'/doc'
+        }
+
+    }))
 }

@@ -1,12 +1,14 @@
 {
   "name": "first-hono",
-  "version" : "1.0.0",
+  "version": "1.0.0",
+  "type": "module",
   "scripts": {
     "dev": "tsx watch src/index.ts"
   },
   "dependencies": {
     "@hono/node-server": "^1.13.2",
     "@hono/zod-openapi": "^0.16.4",
+    "@scalar/hono-api-reference": "^0.5.153",
     "dotenv": "^16.4.5",
     "dotenv-expand": "^11.0.6",
     "hono": "^4.6.4",
