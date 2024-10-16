@@ -2,10 +2,12 @@
 import createApp from "@/lib/create-app";
 import configureOpenAPI from "@/lib/configure-open-api";
 import index from './routes/index.route'
-
+import tasks from './tasks/tasks.index'
 const app = createApp()
 const routes =
-[index,
+[
+    index,
+    tasks
 ]
 
 configureOpenAPI(app)

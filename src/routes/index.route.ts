@@ -6,6 +6,7 @@ import {createMessageObjectSchema} from "stoker/openapi/schemas";
 const router = createRouter()
 .openapi(createRoute({
     method: 'get',
+    tags: ['Index'],
     path: '/',
    responses: {
 

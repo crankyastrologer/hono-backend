@@ -8,6 +8,10 @@
 .idea/usage.statistics.xml
 .idea/shelf
 
+# DB
+dev.db
+migrations
+
 # deps
 node_modules/
 
